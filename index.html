@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuriting Portal</title>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./dev-www/assets/style.css">
+</head>
+<body>
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./bower_components/lodash/dist/lodash.js"></script>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="./bower_components/angular-resource/angular-resource.js"></script>
+    <script src="./bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+    <script src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="./dev-www/app.js"></script>
+    <script src="./dev-www/controllers/customNavbar.js"></script>
+    <script src="./dev-www/controllers/fileUploadModalCtrl.js"></script>
+    <script src="./dev-www/controllers/preStage.js"></script>
+    <script src="./dev-www/controllers/customDataTableCtrl.js"></script>
+    <script src="./dev-www/resources/candidatesResource.js"></script>
+    <div ng-app="app">
+        <custom-navbar></custom-navbar>
+        <div class="state-management-sec">
+            <ui-view></ui-view>
+        </div>
+    </div>
+</body>
+</html>

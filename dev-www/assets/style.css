@@ -1,0 +1,21 @@
+.state-management-sec{
+    margin: 5px;
+}
+.options-sec{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+}
+.sort-sec{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 5px;
+    margin-bottom: 5px;
+}
+.filter-sec{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: 5px;
+    margin-bottom: 5px;
+}

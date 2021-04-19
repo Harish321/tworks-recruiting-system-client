@@ -1,0 +1,20 @@
+{
+  "name": "tworks-recruiting-system-client",
+  "version": "1.0.0",
+  "description": "T-Works Recruiting System Client Code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harish321/tworks-recruiting-system-client.git"
+  },
+  "keywords": [],
+  "author": "Harish Dhulipalla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harish321/tworks-recruiting-system-client/issues"
+  },
+  "homepage": "https://github.com/Harish321/tworks-recruiting-system-client#readme"
+}

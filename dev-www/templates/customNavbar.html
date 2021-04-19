@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default">
+    <div class="nav-bar-items">
+      <div class="navbar-header nav-title">
+        <a class="navbar-brand" href="#">Recuriting Portal</a>
+      </div>
+      <div class="file-upload">
+          <button ng-click="fileUpload()"> File Upload</button>
+      </div>
+    </div>
+</nav>
+<style>
+      .nav-bar-items{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+      }
+      .nav-title{
+        display: flex;
+        justify-content: flex-start;
+      }
+      .file-upload{
+          display: flex;
+          justify-content: flex-end;
+      }
+</style>

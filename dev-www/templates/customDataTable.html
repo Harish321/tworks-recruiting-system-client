@@ -1,0 +1,26 @@
+<div>
+    <table class="table table-stripped table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Years of experience</th>
+                <th>Position applied</th>
+                <th>Date of application</th>
+                <th>Status of the application</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="candidate in candidates|orderBy:sort">
+                <td>{{candidate.name}}</td>
+                <td>{{candidate.email}}</td>
+                <td>{{candidate.age}}</td>
+                <td>{{candidate.yearsOfExperience}}</td>
+                <td>{{candidate.positionApplied}}</td>
+                <td>{{candidate.dateofApplication}}</td>
+                <td>{{candidate.statusOfTheApplication}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

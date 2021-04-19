@@ -1,0 +1,25 @@
+<div>
+    <div class="options-sec">
+        <div class="sort-sec">
+            <label for="sort"> Sort By :</label>
+            <select name="" id="" ng-model="sort" ng-change="applySort()">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="positionApplied">Position Applied</option>
+                <option value="yearsOfExperience">Years of Experience</option>
+                <option value="dateOfApplication">Date of Application</option>
+            </select>
+        </div>
+        <div class="filter-sec">
+            <select name="" id="" ng-model="filterOption">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="positionApplied">Position Applied</option>
+                <option value="yearsOfExperience">Years of Experience</option>
+                <option value="dateOfApplication">Date of Application</option>
+            </select>
+            <input type="text" ng-model="filterValue">
+            <button ng-click="applyFilter()">Apply Filter</button>
+        </div>
+    </div>
+    <custom-data-table data-batch="batch" data-sort="sort" data-filter="filter" data-candidates="renderCandidates"></custom-data-table>
+    <button class="btn btn-primary" ng-click=save()>Save</button>
+</div>

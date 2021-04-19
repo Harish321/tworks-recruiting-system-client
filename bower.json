@@ -1,0 +1,21 @@
+{
+  "name": "tworks-recruiting-system-client",
+  "description": "T-Works Recruiting System Client Code",
+  "main": "index.js",
+  "authors": [
+    "Harish Dhulipalla"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Harish321/tworks-recruiting-system-client",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5"
+  }
+}
