@@ -4,7 +4,11 @@ recuritingPortal.service('candidateResource',["$resource",function($resource){
         save:{
             method:"POST",
             url:endpoint+"/api/create"
-        }
+        },
+        getDataById:{
+            method:"GET",
+            url:endpoint+"/api/getDataById"
+        },
     })
     return resource;
 }])

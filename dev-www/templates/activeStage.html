@@ -1,4 +1,5 @@
 <div>
+    <div class="one-time-msg"ng-if="oneTimeMsg">Data Saved Successfully!</div>
     <div class="options-sec">
         <div class="sort-sec">
             <label for="sort"> Sort By </label>
@@ -16,8 +17,8 @@
                 <option value="statuOfApplication">Status of Application</option>
                 <option value="positionApplied">Position Applied</option>
             </select>
-            <input ng-show="filterOption != 'statuOfApplication'" type="text" ng-model="filterValue">
-            <select ng-show="filterOption == 'statuOfApplication'" name="" id="" ng-model="filterValue">
+            <input ng-model="filterValue" ng-show="filterOption != 'statuOfApplication'" type="text" >
+            <select ng-model="filterValue" type="text" ng-show="filterOption == 'statuOfApplication'" name="" id="">
                 <option value="Approved">Approved</option>
                 <option value="Rejected">Rejected</option>
                 <option value="Waiting">Waiting</option>
@@ -26,5 +27,4 @@
         </div>
     </div>
     <custom-data-table data-batch="batch" data-sort="sort" data-filter="filter" data-candidates="renderCandidates"></custom-data-table>
-    <button class="btn btn-primary" ng-click=save()>Save</button>
 </div>
