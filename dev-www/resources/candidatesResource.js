@@ -1,5 +1,5 @@
 recuritingPortal.service('candidateResource',["$resource",function($resource){
-    var endpoint = "http://localhost:5000"
+    var endpoint = SERVER_URL;
     var resource = $resource(endpoint,null, {
         save:{
             method:"POST",

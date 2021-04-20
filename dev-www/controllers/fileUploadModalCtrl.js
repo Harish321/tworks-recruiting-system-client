@@ -22,7 +22,7 @@ recuritingPortal.controller('fileUploadModalCtrl',($scope,$uibModalInstance,mode
     $scope.uploadFile =()=>{
         $scope.picked = true;
         Upload.upload({
-            url: 'http://localhost:5000/api/file/upload',
+            url: SERVER_URL + '/api/file/upload',
             data: {candidateList: $scope.file}
         }).then(function (resp) {
             $scope.$close();

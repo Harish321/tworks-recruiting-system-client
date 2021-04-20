@@ -14,11 +14,11 @@
             <select name="" id="" ng-model="filterOption">
                 <option disabled selected value> -- select an option -- </option>
                 <option value="name">Name</option>
-                <option value="statuOfApplication">Status of Application</option>
+                <option value="statusOfApplication">Status of Application</option>
                 <option value="positionApplied">Position Applied</option>
             </select>
-            <input ng-model="filterValue" ng-show="filterOption != 'statuOfApplication'" type="text" >
-            <select ng-model="filterValue" type="text" ng-show="filterOption == 'statuOfApplication'" name="" id="">
+            <input ng-model="filterValue" ng-show="filterOption != 'statusOfApplication'" type="text" >
+            <select ng-model="filterValue" type="text" ng-show="filterOption == 'statusOfApplication'" name="" id="">
                 <option value="Approved">Approved</option>
                 <option value="Rejected">Rejected</option>
                 <option value="Waiting">Waiting</option>
