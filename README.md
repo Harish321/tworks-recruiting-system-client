@@ -19,3 +19,10 @@ T-Works Recruiting System Client Code
     - URL can be shared in this stage and same data will be fetched using help of url parameters
     - User can perform Sort and Filer actions in this stage.
 
+## Assumptions & Approach
+
+Considered each file upload as a batch and upon each save of a batch will be generating random bath ID,
+
+all the applications are tracked against the generated batch ID
+
+and the application is developed considering the above approach.
