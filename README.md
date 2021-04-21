@@ -2,9 +2,9 @@
 T-Works Recruiting System Client Code
 
 ## Setup
-1. Run 'npm install' to load the node dependencies
-2. Run 'bower install' to load the project related dependencies
-3. Run 'http-server' or any client hosting to host the project
+1. Run ```npm install``` to load the node dependencies
+2. Run ```bower install``` to load the project related dependencies
+3. Run ```http-server``` or any client hosting to host the project
 
 
 ## Routes
