@@ -1,6 +1,7 @@
 recuritingPortal.controller('preStageCtrl',function($scope,$stateParams,$state,candidateResource){
+    //  Assignment of state params to scope
     $scope.batch = $stateParams.batch;
-    $scope.sort = $stateParams.sort;
+    $scope.sort  = $stateParams.sort;
     $scope.filter = $stateParams.filter;
     $scope.candidates = $stateParams.candidates;
     $scope.renderCandidates = _.cloneDeep($scope.candidates);
@@ -10,6 +11,8 @@ recuritingPortal.controller('preStageCtrl',function($scope,$stateParams,$state,c
             return o[$scope.filterOption] && o[$scope.filterOption].toString().includes($scope.filterValue);
         })
     }
+
+    // Actions 
     $scope.applyFilter = () =>{
         $scope.filter = $scope.filterOption+'.'+$scope.filterValue;
         $state.go('preStage',{

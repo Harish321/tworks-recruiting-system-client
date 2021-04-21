@@ -4,9 +4,9 @@
     </div>
     <div class="modal-body">
         <form class="modal-sec" ng-submit="uploadFile()">
-            <label for="file"> Candidate List:</label>
+            <label for="file"> Candidate List (.xls,.xlsx) </label>
             <span ng-show="picked">{{file.name}}</span>
-            <span ng-show="!picked" class="button btn btn-default" ngf-select ng-model="file" name="file" ngf-pattern="'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'" ng-change="selected()" ngf-accept="'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'">Choose File</span>
+            <span ng-show="!picked" class="button btn btn-default" ngf-select ng-model="file" name="file" ngf-pattern="'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'" ng-change="selected()" ngf-accept="'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'"><i class="fa fa-file"></i> Choose File</span>
             <button class="submit-btn-item btn btn-primary"type="submit">submit</button>
         </form>
     </div>

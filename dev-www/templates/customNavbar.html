@@ -1,25 +1,10 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default bg-dark" style='background-color: #9aaebd'>
     <div class="nav-bar-items">
       <div class="navbar-header nav-title">
-        <a class="navbar-brand" href="#">Recuritment Portal</a>
+        <a class="navbar-brand" style="color:#252525; font-size:16px" href="#"><span style="color:white">RECURITMENT</span> PORTAL</a>
       </div>
       <div class="file-upload">
-          <button ng-click="fileUpload()"><i class="fa fa-book"></i> File Upload</button>
+          <button class="btn btn-secondary" ng-click="fileUpload()"><i class="fa fa-file"></i> File Upload</button>
       </div>
     </div>
 </nav>
-<style>
-      .nav-bar-items{
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-      }
-      .nav-title{
-        display: flex;
-        justify-content: flex-start;
-      }
-      .file-upload{
-          display: flex;
-          justify-content:center;
-          align-items: center;
-      }
-</style>

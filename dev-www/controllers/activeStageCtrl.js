@@ -1,6 +1,7 @@
 recuritingPortal.controller('activeStageCtrl',function($scope,$stateParams,$state,candidateResource){
+    // Assigning filter params to scope
     $scope.batch = $stateParams.batch;
-    $scope.sort = $stateParams.sort;
+    $scope.sort  = $stateParams.sort;
     $scope.filter = $stateParams.filter;
     $scope.candidates = $stateParams.candidates;
     if($stateParams.pageData && $stateParams.pageData.oneTimeMsg){

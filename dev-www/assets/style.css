@@ -1,6 +1,23 @@
+/* Main page route div */
 .state-management-sec{
     margin: 5px;
 }
+
+/* Custom Nav BAR  */
+.nav-bar-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.nav-title{
+  display: flex;
+  justify-content: flex-start;
+}
+.file-upload{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
 .options-sec{
     display: grid;
     grid-template-columns:  1fr 1fr;
@@ -21,10 +38,15 @@
     margin-bottom: 5px;
     align-items: center;
 }
+.modal-header{
+    font-size: 15px;
+    font-weight: 500;
+}
 .modal-sec{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 1rem;
+    padding: 15px;
 }
 .submit-btn-item{
     grid-column: 1/span2;

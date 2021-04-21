@@ -10,7 +10,7 @@
             </select>
         </div>
         <div class="filter-sec">
-            <select name="" id="" ng-model="filterOption">
+            <select  name="" id="" ng-model="filterOption">
                 <option disabled selected value> -- select an option -- </option>
                 <option value="name">Name</option>
                 <option value="statusOfApplication">Status of Application</option>
@@ -22,9 +22,9 @@
                 <option value="Rejected">Rejected</option>
                 <option value="Waiting">Waiting</option>
             </select>
-            <button ng-click="applyFilter()">Apply Filter</button>
+            <button class="btn btn-outline-secondary" ng-click="applyFilter()"> <i class="fa fa-filter"></i> Apply Filter</button>
         </div>
     </div>
     <custom-data-table data-batch="batch" data-sort="sort" data-filter="filter" data-candidates="renderCandidates"></custom-data-table>
-    <button class="btn btn-primary" ng-click=save()>Save</button>
+    <button class="btn btn-primary" ng-click=save()><i class="fa fa-save"></i> Save</button>
 </div>

@@ -1,6 +1,6 @@
 recuritingPortal.config(["$stateProvider", "$urlRouterProvider",function($stateProvider,$urlRouterProvider){
     var states = [
-        { name: "home",url:"/home",template:"<div class='home-msg'>Upload a File to view the Preview</div>"},
+        { name: "home",url:"/home",template:"<div class='home-msg'>Upload <span style='color:#444444;'> <i class='fa fa-file'></i> File</span> to Preview</div>"},
         { name: "preStage",url: "/preStage/:sort/:filter" ,params:{
             candidates:[],
             sort:"",
@@ -16,5 +16,4 @@ recuritingPortal.config(["$stateProvider", "$urlRouterProvider",function($stateP
     ] 
     states.forEach((state) => $stateProvider.state(state));
     $urlRouterProvider.otherwise('/home');
- 
  }])
