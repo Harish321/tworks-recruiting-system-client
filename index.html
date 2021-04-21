@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuriting Portal</title>
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./dev-www/assets/style.css">
 </head>
 <body>
+    <!-- Dependencies -->
     <script src="./bower_components/jquery/dist/jquery.js"></script>
     <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="./bower_components/lodash/dist/lodash.js"></script>
@@ -18,16 +20,20 @@
     <script src="./bower_components/ng-file-upload/ng-file-upload.min.js"></script>
     <script src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="./bower_components/components-font-awesome/css/fontawesome.min.css"></script>
+    <!-- Environmental variables -->
     <script src="./dev-www/env.js"></script>
     <script src="./dev-www/app.js"></script>
     <script src="./dev-www/config/config.js"></script>
-    <script src="./dev-www/directives/directives.js"></script>
+    <!-- Resources -->
+    <script src="./dev-www/resources/candidatesResource.js"></script>
+    <!-- Controllers -->
     <script src="./dev-www/controllers/customNavbar.js"></script>
     <script src="./dev-www/controllers/fileUploadModalCtrl.js"></script>
     <script src="./dev-www/controllers/preStage.js"></script>
     <script src="./dev-www/controllers/activeStageCtrl.js"></script>
     <script src="./dev-www/controllers/customDataTableCtrl.js"></script>
-    <script src="./dev-www/resources/candidatesResource.js"></script>
+    <!-- Directives -->
+    <script src="./dev-www/directives/directives.js"></script>
     <div ng-app="app">
         <custom-navbar></custom-navbar>
         <div class="state-management-sec">
