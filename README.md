@@ -9,15 +9,15 @@ T-Works Recruiting System Client Code
 
 ## Routes
 1. /home 
-    - default root , user can upload file from this stage itself.
+    - This is the default route, user can upload a file from this stage itself.
 2. /prestage 
-    - Application will be rediected to PreStage route after the file upload
-    - Here user can review the applicaiton and save it in database
-    - User can perform Sort and Filter actions in this stage.
+    - Page will be rediected to state called PreStage route after a successful file upload.
+    - User can review the applicaiton in this stage and save it in database.
+    - User can perform Sort and Filter actions starting from this stage.
 3. /activeStage 
-    - Once the data is saved in database, application will be redirected to active stage
-    - URL can be shared in this stage and same data will be fetched using help of url parameters
-    - User can perform Sort and Filer actions in this stage.
+    - Once the data is saved in database, application will be redirected to state called active stage.
+    - URL can be shared from this stage onwards and same data will be fetched using help of url parameters.
+    - User can perform Sort and Filer actions in this stage as well.
 
 ## Assumptions & Approach
 
