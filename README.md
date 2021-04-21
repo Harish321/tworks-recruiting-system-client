@@ -21,8 +21,6 @@ T-Works Recruiting System Client Code
 
 ## Assumptions & Approach
 
-Considered each file upload as a batch and upon each save of a batch and will be generating random batch ID,
-
-all the applications are tracked against the generated batch ID
-
-and the application is developed considering the above approach.
+- Considered each file upload as a batch and upon clicking on save of a batch, will be generating random batch ID,
+- All the applications will be tracked against the generated batch ID.
+- The project is developed considering the above approach.
