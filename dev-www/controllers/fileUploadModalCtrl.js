@@ -20,6 +20,7 @@ recuritingPortal.controller('fileUploadModalCtrl',($scope,$uibModalInstance,mode
     }
     $scope.picked = false;
     $scope.uploadFile =()=>{
+        $scope.$emit('load');
         $scope.picked = true;
         Upload.upload({
             url: SERVER_URL + '/api/file/upload',
@@ -32,7 +33,11 @@ recuritingPortal.controller('fileUploadModalCtrl',($scope,$uibModalInstance,mode
         }, function (evt) {
             var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
             console.log('progress: ' + progressPercentage + '% ');
-        });
+        },function(err){
+            alert("Server Error while uploading the file.");
+        }).finally(()=>{
+            $scope.$emit('unload');
+        })
     }
     $scope.selected = () => { $scope.picked = true;}
 })

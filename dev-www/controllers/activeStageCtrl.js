@@ -9,6 +9,7 @@ recuritingPortal.controller('activeStageCtrl',function($scope,$stateParams,$stat
     }
     $scope.renderCandidates = _.cloneDeep($scope.candidates);
     if($stateParams.candidates == null){
+        $scope.$emit('load');
         candidateResource.getDataById({batchId:$scope.batch}).$promise.then(function(resp){
             $scope.candidates = resp.rows
             $scope.renderCandidates = _.cloneDeep($scope.candidates);
@@ -17,7 +18,7 @@ recuritingPortal.controller('activeStageCtrl',function($scope,$stateParams,$stat
                     return o[$scope.filterOption] && o[$scope.filterOption].toString().includes($scope.filterValue);
                 })
             }
-        },function(err){})
+        },function(err){}).finally($scope.$emit('unload'));
     }
     [$scope.filterOption,$scope.filterValue] = $scope.filter && $scope.filter.split('.').length == 2 ? [$scope.filter.split('.')[0],$scope.filter.split('.')[1]] : ["",''];
     if($scope.filterOption && $scope.filterValue && $scope.candidates){

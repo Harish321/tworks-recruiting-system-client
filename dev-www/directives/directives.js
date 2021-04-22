@@ -18,3 +18,17 @@ recuritingPortal.directive('customDataTable',function(){
         controller:'customDataTableCtrl'
     }
 })
+recuritingPortal.directive('spinner',function(){
+    return {
+        restrict : "AE",
+        templateUrl:"dev-www/templates/spinner.html",
+        link:function(scope){
+            scope.$on('load',()=>{
+                scope.loader = true;
+            })
+            scope.$on('unload',() => {
+                scope.loader = false;
+            })
+        }
+    }
+})

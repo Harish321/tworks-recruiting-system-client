@@ -4,6 +4,9 @@ recuritingPortal.controller('preStageCtrl',function($scope,$stateParams,$state,c
     $scope.sort  = $stateParams.sort;
     $scope.filter = $stateParams.filter;
     $scope.candidates = $stateParams.candidates;
+    if(!$scope.candidates || $scope.candidates.length == 0){
+        $state.go("home");
+    }
     $scope.renderCandidates = _.cloneDeep($scope.candidates);
     [$scope.filterOption,$scope.filterValue] = $scope.filter && $scope.filter.split('.').length == 2 ? [$scope.filter.split('.')[0],$scope.filter.split('.')[1]] : ["",''];
     if($scope.filterOption && $scope.filterValue){
@@ -31,6 +34,7 @@ recuritingPortal.controller('preStageCtrl',function($scope,$stateParams,$state,c
         })   
     }
     $scope.save = () => {
+        $scope.$emit('load');
         candidateResource.save(_.merge($scope.candidates,$scope.renderCandidates)).$promise.then(function(resp){
             $state.go('activeStage',{
                 batch: resp.batchId,
@@ -43,6 +47,8 @@ recuritingPortal.controller('preStageCtrl',function($scope,$stateParams,$state,c
             })
         },function(err){
 
+        }).finally(()=>{
+            $scope.$emit('unload');
         })
     }
     $scope.clearFilter =  () => {
