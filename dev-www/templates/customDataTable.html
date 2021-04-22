@@ -19,7 +19,11 @@
                 <td>{{candidate.yearsOfExperience}}</td>
                 <td>{{candidate.positionApplied}}</td>
                 <td>{{candidate.dateOfApplication}}</td>
-                <td>{{candidate.statusOfApplication}}</td>
+                <td><select ng-model="candidate.statusOfApplication">
+                    <option value="Approved">Approved</option>
+                    <option value="Rejected">Rejected</option>
+                    <option value="Waiting">Waiting</option>
+                </select></td>
             </tr>
         </tbody>
     </table>

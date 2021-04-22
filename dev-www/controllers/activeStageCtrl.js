@@ -37,4 +37,12 @@ recuritingPortal.controller('activeStageCtrl',function($scope,$stateParams,$stat
             candidates:$scope.candidates
         })   
     }
+    $scope.clearFilter =  () => {
+        $state.go('activeStage',{
+            batch: $scope.batch,
+            filter:null,
+            sort:null,
+            candidates:$scope.candidates
+        })
+    }
 });

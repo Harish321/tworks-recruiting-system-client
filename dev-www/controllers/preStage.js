@@ -31,7 +31,7 @@ recuritingPortal.controller('preStageCtrl',function($scope,$stateParams,$state,c
         })   
     }
     $scope.save = () => {
-        candidateResource.save($scope.candidates).$promise.then(function(resp){
+        candidateResource.save(_.merge($scope.candidates,$scope.renderCandidates)).$promise.then(function(resp){
             $state.go('activeStage',{
                 batch: resp.batchId,
                 filter:$scope.filter,
@@ -43,6 +43,14 @@ recuritingPortal.controller('preStageCtrl',function($scope,$stateParams,$state,c
             })
         },function(err){
 
+        })
+    }
+    $scope.clearFilter =  () => {
+        $state.go('preStage',{
+            batch: null,
+            filter:null,
+            sort:null,
+            candidates:$scope.candidates
         })
     }
 });
