@@ -12,10 +12,15 @@ recuritingPortal.controller('activeStageCtrl',function($scope,$stateParams,$stat
         candidateResource.getDataById({batchId:$scope.batch}).$promise.then(function(resp){
             $scope.candidates = resp.rows
             $scope.renderCandidates = _.cloneDeep($scope.candidates);
+            if($scope.filterOption && $scope.filterValue && $scope.candidates){
+                $scope.renderCandidates = $scope.candidates.filter(o => {
+                    return o[$scope.filterOption] && o[$scope.filterOption].toString().includes($scope.filterValue);
+                })
+            }
         },function(err){})
     }
     [$scope.filterOption,$scope.filterValue] = $scope.filter && $scope.filter.split('.').length == 2 ? [$scope.filter.split('.')[0],$scope.filter.split('.')[1]] : ["",''];
-    if($scope.filterOption && $scope.filterValue){
+    if($scope.filterOption && $scope.filterValue && $scope.candidates){
         $scope.renderCandidates = $scope.candidates.filter(o => {
             return o[$scope.filterOption] && o[$scope.filterOption].toString().includes($scope.filterValue);
         })
