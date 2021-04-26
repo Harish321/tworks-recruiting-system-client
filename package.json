@@ -5,13 +5,10 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install",
-    "start":"node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Harish321/tworks-recruiting-system-client.git"
-  },
+  "repository": "git+https://github.com/Harish321/tworks-recruiting-system-client.git",
   "keywords": [],
   "author": "Harish Dhulipalla",
   "license": "ISC",

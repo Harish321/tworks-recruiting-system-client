@@ -14,13 +14,13 @@ recuritingPortal.directive('readFile', function ($parse) {
 		}
 	};
 })
-recuritingPortal.controller('fileUploadModalCtrl',($scope,$uibModalInstance,model,Upload,$state)=>{
+recuritingPortal.controller('fileUploadModalCtrl',($scope,$uibModalInstance,model,Upload,$state,pageHelper)=>{
     $scope.cancel = function () {
         $scope.$close();
     }
     $scope.picked = false;
     $scope.uploadFile =()=>{
-        $scope.$emit('load');
+        pageHelper.showLoader();
         $scope.picked = true;
         Upload.upload({
             url: SERVER_URL + '/api/file/upload',
@@ -35,9 +35,7 @@ recuritingPortal.controller('fileUploadModalCtrl',($scope,$uibModalInstance,mode
             console.log('progress: ' + progressPercentage + '% ');
         },function(err){
             alert("Server Error while uploading the file.");
-        }).finally(()=>{
-            $scope.$emit('unload');
-        })
+        }).finally(pageHelper.hideLoader);
     }
     $scope.selected = () => { $scope.picked = true;}
 })

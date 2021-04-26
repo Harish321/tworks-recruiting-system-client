@@ -18,7 +18,7 @@ recuritingPortal.directive('customDataTable',function(){
         controller:'customDataTableCtrl'
     }
 })
-recuritingPortal.directive('spinner',function(){
+recuritingPortal.directive('spinnerr',function(){
     return {
         restrict : "AE",
         templateUrl:"dev-www/templates/spinner.html",

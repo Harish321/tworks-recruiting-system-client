@@ -1,4 +1,4 @@
-recuritingPortal.controller('preStageCtrl',function($scope,$stateParams,$state,candidateResource){
+recuritingPortal.controller('preStageCtrl',function($scope,$stateParams,$state,candidateResource,pageHelper){
     //  Assignment of state params to scope
     $scope.batch = $stateParams.batch;
     $scope.sort  = $stateParams.sort;
@@ -34,7 +34,7 @@ recuritingPortal.controller('preStageCtrl',function($scope,$stateParams,$state,c
         })   
     }
     $scope.save = () => {
-        $scope.$emit('load');
+        pageHelper.showLoader();
         candidateResource.save(_.merge($scope.candidates,$scope.renderCandidates)).$promise.then(function(resp){
             $state.go('activeStage',{
                 batch: resp.batchId,
@@ -48,7 +48,7 @@ recuritingPortal.controller('preStageCtrl',function($scope,$stateParams,$state,c
         },function(err){
 
         }).finally(()=>{
-            $scope.$emit('unload');
+            pageHelper.hideLoader();
         })
     }
     $scope.clearFilter =  () => {

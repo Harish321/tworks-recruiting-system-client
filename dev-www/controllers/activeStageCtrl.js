@@ -1,4 +1,4 @@
-recuritingPortal.controller('activeStageCtrl',function($scope,$stateParams,$state,candidateResource){
+recuritingPortal.controller('activeStageCtrl',function($scope,$stateParams,$state,candidateResource,pageHelper){
     // Assigning filter params to scope
     $scope.batch = $stateParams.batch;
     $scope.sort  = $stateParams.sort;
@@ -9,7 +9,7 @@ recuritingPortal.controller('activeStageCtrl',function($scope,$stateParams,$stat
     }
     $scope.renderCandidates = _.cloneDeep($scope.candidates);
     if($stateParams.candidates == null){
-        $scope.$emit('load');
+        pageHelper.showLoader();
         candidateResource.getDataById({batchId:$scope.batch}).$promise.then(function(resp){
             $scope.candidates = resp.rows
             $scope.renderCandidates = _.cloneDeep($scope.candidates);
@@ -18,7 +18,7 @@ recuritingPortal.controller('activeStageCtrl',function($scope,$stateParams,$stat
                     return o[$scope.filterOption] && o[$scope.filterOption].toString().includes($scope.filterValue);
                 })
             }
-        },function(err){}).finally($scope.$emit('unload'));
+        },function(err){}).finally(pageHelper.hideLoader);
     }
     [$scope.filterOption,$scope.filterValue] = $scope.filter && $scope.filter.split('.').length == 2 ? [$scope.filter.split('.')[0],$scope.filter.split('.')[1]] : ["",''];
     if($scope.filterOption && $scope.filterValue && $scope.candidates){
